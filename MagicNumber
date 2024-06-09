@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Magic {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter their favorite number
+        System.out.println("Welcome to the Magic Number Game!");
+        System.out.println("Please enter your favorite number:");
+
+        // Read the user's favorite number
+        int myNumber = scanner.nextInt();
+
+        // Perform a series of calculations to transform the user's number
+        int stepOne = myNumber * myNumber;
+        int stepTwo = stepOne + myNumber;
+        int stepThree = stepTwo / myNumber;
+        int stepFour = stepThree + 17;
+        int stepFive = stepFour - myNumber;
+        int stepSix = stepFive / 6;
+
+        // Print out the final magic number
+        System.out.println("Your magic number is: " + stepSix);
+
+        scanner.close();
+    }
+}
